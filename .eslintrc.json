@@ -1,0 +1,38 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        /* enable recommended rules */
+        "eslint:recommended",
+        /* react recommended rules */
+        "plugin:react/recommended",
+        /* enable typescript rules */
+        "plugin:@typescript-eslint/recommended",
+        /* enable additional typescript type checking rules */
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        /* enable additional strict opinionated typescript rules */
+        "plugin:@typescript-eslint/strict",
+        /* disable formatting rules conflicting with prettier */
+        "prettier"
+    ],
+    "overrides": [],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": ["./tsconfig.json"]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "plugins": ["react", "@typescript-eslint"],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/no-floating-promises": "off",
+        "@typescript-eslint/no-non-null-assertion": "off"
+    }
+}
